@@ -4,7 +4,6 @@ import { copyFileSync, mkdirSync, readdirSync, statSync, readFileSync } from "fs
 import { execSync } from "child_process";
 import { sandboxesFolder, templatesFolderName } from "./constants";
 import { NO_COMMAND_ERR, handleWarn } from './errors'
-import chalk from "chalk";
 
 const __filename = fileURLToPath(import.meta.url);
 export const __dirname = dirname(__filename);
