@@ -1,5 +1,5 @@
-# sndbx
-Makes codes sandboxes easy
+# SNDBX
+Makes code sandboxes easy
 
 ## Описание
 Утилита позволяет развернуть песочницу и открыть ее в VSCode с помощью одной команды.\
