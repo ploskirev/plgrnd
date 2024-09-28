@@ -1,19 +1,19 @@
 {
-  "name": "plgrnd",
+  "name": "sndbx",
   "version": "0.0.1",
   "license": "ISC",
   "author": "https://github.com/ploskirev",
-  "description": "makes codes playgrounds",
-  "homepage": "https://github.com/ploskirev/plgrnd",
+  "description": "makes codes sandboxes",
+  "homepage": "https://github.com/ploskirev/sndbx",
   "repository": {
     "type": "git",
-    "url": "github:ploskirev/plgrnd"
+    "url": "github:ploskirev/sndbx"
   },
   "bin": {
-    "plgrnd": "dist/index.js"
+    "sndbx": "dist/index.js"
   },
   "bugs": {
-    "url": "https://github.com/ploskirev/plgrnd/issues"
+    "url": "https://github.com/ploskirev/sndbx/issues"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -25,10 +25,15 @@
     "build": "rollup -c"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "15.3.0",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "12.1.0",
     "@types/node": "22.7.4",
     "rollup": "4.22.5",
+    "rollup-plugin-copy": "3.5.0",
     "tslib": "2.7.0"
+  },
+  "dependencies": {
+    "chalk": "5.3.0"
   }
 }
