@@ -2,7 +2,7 @@ import { readdirSync, rmSync, statSync, readFileSync } from 'fs'
 import { join } from 'path'
 import chalk from 'chalk'
 import { COMMAND_CLEAR, COMMAND_HELP, OPTION_DOCS, LANG_GO, LANG_JS, LANG_NODE, COMMAND_OPEN, goDocsLink, jsDocsLink, sandboxesFolder, COMMAND_VERSION, COMMAND_SHORT_VERSION } from "./constants"
-import { copyTemplateContentToSandbox, createSandboxFolder, openFolder, openLink, openVSCode, __dirname } from "./utils"
+import { copyTemplateContentToSandbox, createSandboxFolder, openFolder, openLink, openVSCode, __dirname, initGoProject } from "./utils"
 
 
 function javaScriptExecutor(option?: string) {
@@ -29,6 +29,7 @@ function goExecutor(option?: string) {
   const sandboxPath = createSandboxFolder(LANG_GO)
 
   copyTemplateContentToSandbox(sandboxPath, LANG_GO)
+  initGoProject(sandboxPath)
   try {
     openVSCode(sandboxPath)
   } catch {

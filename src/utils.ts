@@ -95,3 +95,11 @@ export function checkForUpdates() {
     console.log()
   }
 }
+
+export function initGoProject(sandboxPath: string) {
+  try {
+    execSync(`cd ${sandboxPath} && go mod init new_sand`)
+  } catch (err) {
+    handleWarn(`Не удалось инициализировать go project. Вы можете самостоятельно в папке с песочницей выполнить команду 'go mod init <project-name>'`)
+  }
+}
